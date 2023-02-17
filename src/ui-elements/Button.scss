@@ -1,0 +1,26 @@
+@import '../shared.scss';
+
+.primary-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 10px;
+    height: 34px;
+    background: $primary;
+    border-radius: 4px;
+    border: 0;
+    font-family: $open-sans;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $white;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

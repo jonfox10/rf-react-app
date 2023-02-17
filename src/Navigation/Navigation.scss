@@ -1,0 +1,299 @@
+@import '../shared.scss';
+
+.navigation-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    height: 100vh;
+
+    .nav-left {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 12px 7.5px;
+        gap: 10px;
+        width: 63px;
+        background: $white;
+        border-right: 1px solid $light-grey;
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+
+        @media screen and (max-width: 500px) {
+            display: none;
+        }
+
+        .top {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            width: 48px;
+            height: 108px;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+
+            .nav-logo {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 8px 0px 24px 12px;
+                gap: 12px;
+                width: 48px;
+                height: 64px;
+                border-radius: 8px;
+                flex: none;
+                order: 0;
+                align-self: stretch;
+                flex-grow: 0;
+
+                .rf-logo {
+                    width: 32px;
+                    height: 32px;
+                    flex: none;
+                    order: 0;
+                    flex-grow: 0;
+                }
+            }
+
+            .nav-org {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 4px 8px 8px;
+                gap: 12px;
+                height: 44px;
+                background: $white;
+                border-radius: 8px;
+                flex: none;
+                order: 1;
+                flex-grow: 0;
+                .org-logo {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 4px;
+                    flex: none;
+                    order: 0;
+                    flex-grow: 0;
+                }
+            }
+        }
+
+        .bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            width: 48px;
+            height: 40px;
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+            .nav-user {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 4px 8px;
+                gap: 12px;
+                height: 40px;
+                background: $white;
+                border-radius: 8px;
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+
+                .user-initials {
+                    width: 32px;
+                    height: 32px;
+                    left: 8px;
+                    top: 4px;
+                    background: $dark-grey;
+                    border-radius: 100px;
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 18px;
+                    text-align: center;
+                    color: $white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    .nav-right {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 8px;
+        width: 215px;
+        border-right: 1px solid $light-grey;
+        flex: none;
+        order: 1;
+        align-self: stretch;
+        flex-grow: 0;
+
+        @media screen and (max-width: 950px) {
+            display: none;
+        }
+
+        .event-title {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 8px 8px 12px;
+            width: 199px;
+            height: 39px;
+
+            h3 {
+                width: 125px;
+                height: 19px;
+                font-family: $inter;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 18px;
+                color: $black;
+            }
+        }
+
+        .event-details {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 0px 8px 12px;
+
+            .location, .month-day {
+                font-family: $inter;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 10px;
+                line-height: 18px;
+            }
+        }
+
+        .nav-search {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 4px;
+            gap: 4px;
+            width: 183px;
+            height: 24px;
+            background: $nav-background;
+            border-radius: 4px;
+            border: 0;
+
+            .search-icon {
+                width: 14px;
+                height: 14px;
+                position: absolute;
+            }
+
+            .nav-input {
+                padding: 4px;
+                margin-left: 20px;
+                width: 155px;
+                height: 24px;
+                background: $nav-background;
+                border: 0;
+                color: $grey-text;
+                font-family: $inter;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 10px;
+                line-height: 10px;
+            }
+        }
+
+        .nav-links {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            ul {
+                padding: 0;
+
+                li {
+                    list-style: none;
+                }
+
+                .nav-link {
+                    font-family: $inter;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: $grey-text;
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding: 8px 12px;
+                    gap: 12px;
+                    width: 200px;
+                    height: 40px;
+                    border-radius: 8px;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: $primary;
+
+                        .circle {
+                            background-color: $primary;
+                        }
+                    }
+
+                    .circle {
+                        height: 24px;
+                        width: 24px;
+                        border-radius: 50%;
+                        background-color: $grey-text;
+                    }
+
+                    &.highlight {
+                        background: rgba(92, 0, 220, 0.08);
+                        color: $primary;
+
+                        .circle {
+                            background-color: $primary;
+                        }
+                    }
+                }
+
+                .sub-nav {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 4px 12px 12px 48px;
+
+                    .sub-nav-item {
+                        list-style: none;
+                        font-family: $inter;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 14px;
+                        padding-top: 8px;
+                        color: $grey-text;
+
+                        &:hover {
+                            cursor: pointer;
+                            color: $primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

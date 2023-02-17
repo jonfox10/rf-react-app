@@ -1,0 +1,312 @@
+@import '../shared.scss';
+
+.event-container {
+    box-sizing: border-box;
+    font-family: $inter;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 48px;
+    gap: 40px;
+    height: 100%;
+    overflow-y: scroll;
+
+    @media screen and (max-width: 500px) {
+        padding: 10px;
+        align-items: center;
+    }
+
+    .event-top {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 0px;
+        gap: 16px;
+        width: 100%;
+
+        @media screen and (max-width: 700px) {
+            flex-direction: column;
+        }
+
+        .event-details {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 8px;
+
+            .org-logo {
+                width: 89px;
+                height: 89px;
+                margin-right: 16px;
+                border-radius: 8px
+            }
+
+            .event-title {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                .event-name {
+                    margin: 0;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 32px;
+                    line-height: 39px;
+                    text-align: left;
+
+                    @media screen and (max-width: 700px) {
+                        font-size: 24px;
+                        line-height: 29px;
+                    }
+                }
+
+                .event-date {
+                    margin: 0;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 19px;
+                    text-align: left
+                }
+
+                .event-location {
+                    margin: 0;
+                    margin: 0;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 19px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .event-setup-guide {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 16px;
+        width: 100%;
+
+        h2 {
+            margin: 0;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 29px;
+        }
+
+        p {
+            margin: 0;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: left;
+        }
+    }
+
+    .attendee-setup {
+        border-top: 1px solid $medium-grey;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 24px;
+
+        width: 100%;
+
+        .attendee-setup-header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0px;
+            padding-top: 24px;
+            gap: 24px;
+
+            width: 100%;
+
+            .person-portal-icon {
+                width: 35px;
+                height: 35px;
+            }
+
+            h3 {
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 24px;
+                color: $text;
+            }
+        }
+
+        .attendee-base-settings {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 8px;
+
+            width: 100%;
+
+            .base-settings-header {
+
+                h5 {
+                    margin: 0;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: $text;
+                }
+
+            }
+
+            .base-settings-bar {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                padding: 16px 24px;
+                gap: 32px;
+
+                width: 100%;
+
+                background: $white;
+                border: 1px solid $light-grey;
+                border-radius: 4px;
+
+                .settings-bar-item {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 8px;
+                    gap: 4px;
+                    width: 221px;
+                    height: 51px;
+                    background: $white;
+                    border-radius: 4px;
+                    margin: 8px;
+
+                    h5 {
+                        margin: 0;
+                        color: $text;
+                    }
+
+                    p {
+                        margin: 0;
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 15px;
+                        text-align: left;
+                        color: $text;
+                    }
+                }
+            }
+        }
+
+        .attendee-registration-workflows {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 8px;
+            width: 100%;
+
+            .workflows-header{
+                h5 {
+                    margin: 0;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: $text;
+                    text-align: left;
+                }
+            }
+
+            .card-rows {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                padding: 0px;
+                gap: 16px;
+                width: 100%;
+
+                .card {
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 24px 32px;
+                    gap: 4px;
+                    width: 340px;
+                    height: 122px;
+                    background: $white;
+                    border: 1px solid $light-grey;
+                    border-radius: 4px;
+
+                    @media screen and (max-width: 400px) {
+                        width: 100%;
+                    }
+
+                    &.add-attendee {
+                        align-items: center;
+
+                        .card-header, .card-text-box {
+                            justify-content: center;
+
+                            p {
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    .card-header {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        padding: 0px;
+                        gap: 8px;
+                        width: 172px;
+                        height: 24px;
+
+                        .card-icon {
+                            height: 24px;
+                            width: 24px;
+                        }
+
+                        h5 {
+                            margin: 0;
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 13px;
+                            line-height: 17px;
+                            color: $text;
+                        }
+                    }
+
+                    .card-text-box {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+
+                        p {
+                            font-weight: 400;
+                            font-size: 12px;
+                            line-height: 15px;
+                            max-width: 267px;
+                            height: 30px;
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
